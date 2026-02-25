@@ -1,0 +1,87 @@
+.fuel-bar {
+  width: 100%;
+  padding: 8px 0;
+  background: linear-gradient(
+    90deg,
+    rgba(22, 95, 174, 0.05),
+    rgba(124, 192, 0, 0.05)
+  );
+  border-top: 1px solid rgba(22, 95, 174, 0.10);
+  border-bottom: 1px solid rgba(22, 95, 174, 0.15);
+  font-family: "Poppins", sans-serif;
+}
+
+.fuel-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.fuel-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #165FAE;
+  white-space: nowrap;
+}
+
+.fuel-icon {
+  width: 18px;
+  height: 18px;
+  color: #165FAE;
+}
+
+.fuel-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid rgba(22, 95, 174, 0.15);
+  white-space: nowrap;
+}
+
+.fuel-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: #165FAE;
+}
+
+.fuel-price {
+  font-size: 13px;
+  font-weight: 900;
+  color: #ffffff;
+  background: #165FAE;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.fuel-chip.diesel .fuel-price {
+  background: #7CC000;
+}
+
+.fuel-updated {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(22, 95, 174, 0.75);
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .fuel-inner {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .fuel-updated {
+    margin-left: 0;
+    width: 100%;
+  }
+}

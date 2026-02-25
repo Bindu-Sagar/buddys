@@ -1,0 +1,122 @@
+/* Navbar wrapper */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(22, 95, 174, 0.12);
+}
+
+/* Inner layout */
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo area */
+.brand {
+  display: flex;
+  align-items: center;
+  padding-right: 100px;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brand img {
+  height: 55px;
+  width: auto;
+  display: block;
+  
+}
+
+
+/* Links */
+.links-container {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+/* Real-world link styling */
+.link {
+  position: relative;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;              /* always bold => no shifting */
+  color: #165FAE;                /* brand blue */
+  opacity: 0.88;
+  padding: 8px 2px;
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+/* underline animation */
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0%;
+  height: 3px;
+  background: #7CC000;           /* accent green */
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+/* Optional: Active link (add className="link active") */
+.link.active {
+  opacity: 1;
+}
+
+.link.active::after {
+  width: 100%;
+}
+
+/* CTA button on the right */
+.nav-cta {
+  margin-left: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
+  color: #ffffff;
+  background: #165FAE;
+  box-shadow: 0 10px 24px rgba(22, 95, 174, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(22, 95, 174, 0.28);
+  opacity: 0.95;
+}
+
+/* Small screen (basic) */
+@media (max-width: 768px) {
+  .links-container {
+    gap: 18px;
+  }
+  .link {
+    font-size: 15px;
+  }
+  .brand-name {
+    display: none; /* keep it clean on mobile */
+  }
+}

@@ -1,0 +1,242 @@
+.contact-section {
+  width: 100%;
+  padding: 70px 0;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.contact-header h2 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 900;
+  color: #165FAE;
+}
+
+.contact-header p {
+  margin: 10px 0 0;
+  max-width: 640px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(22, 95, 174, 0.75);
+}
+
+.contact-grid {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+}
+
+.contact-card,
+.map-card {
+  background: #ffffff;
+  border: 1px solid rgba(22, 95, 174, 0.14);
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+/* Left card */
+.contact-card {
+  padding: 18px;
+}
+
+.contact-badge {
+  display: inline-block;
+  background: rgba(124, 192, 0, 0.12);
+  border: 1px solid rgba(124, 192, 0, 0.22);
+  color: #165FAE;
+  font-weight: 900;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.contact-info {
+  display: grid;
+  gap: 10px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(22, 95, 174, 0.10);
+  margin-bottom: 14px;
+}
+
+.contact-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.contact-label {
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(22, 95, 174, 0.70);
+  white-space: nowrap;
+}
+
+.contact-value {
+  font-size: 13px;
+  font-weight: 800;
+  color: #165FAE;
+  text-decoration: none;
+  text-align: right;
+}
+
+.contact-value:hover {
+  color: #7CC000;
+}
+
+/* Form */
+.contact-form {
+  display: grid;
+  gap: 12px;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(22, 95, 174, 0.80);
+  margin-bottom: 6px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid rgba(22, 95, 174, 0.18);
+  border-radius: 14px;
+  padding: 12px 12px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border: 1px solid rgba(22, 95, 174, 0.40);
+  box-shadow: 0 0 0 4px rgba(22, 95, 174, 0.10);
+}
+
+/* Button */
+.contact-btn {
+  border: 0;
+  cursor: pointer;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+  background: #165FAE;
+  color: #ffffff;
+  box-shadow: 0 12px 26px rgba(22, 95, 174, 0.22);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.contact-note {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(22, 95, 174, 0.70);
+}
+
+/* Map card */
+.map-card {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.map-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.map-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: #165FAE;
+}
+
+.map-link {
+  font-size: 12px;
+  font-weight: 900;
+  color: #7CC000;
+  text-decoration: none;
+}
+
+.map-link:hover {
+  color: #165FAE;
+}
+
+.map-frame {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(22, 95, 174, 0.14);
+  height: 340px;
+  background: rgba(22, 95, 174, 0.04);
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.map-btn {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-weight: 900;
+  font-size: 13px;
+  color: #165FAE;
+  background: rgba(22, 95, 174, 0.08);
+  border: 1px solid rgba(22, 95, 174, 0.14);
+}
+
+.map-btn.primary {
+  background: #7CC000;
+  border: 1px solid rgba(124, 192, 0, 0.25);
+  color: #0b2a15;
+}
+
+.map-btn:hover {
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-frame {
+    height: 300px;
+  }
+}
