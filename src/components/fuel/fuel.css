@@ -1,87 +1,138 @@
 .fuel-bar {
   width: 100%;
-  padding: 8px 0;
   background: linear-gradient(
     90deg,
-    rgba(22, 95, 174, 0.05),
+    rgba(22, 95, 174, 0.06),
     rgba(124, 192, 0, 0.05)
   );
-  border-top: 1px solid rgba(22, 95, 174, 0.10);
-  border-bottom: 1px solid rgba(22, 95, 174, 0.15);
+  border-bottom: 1px solid rgba(22, 95, 174, 0.10);
   font-family: "Poppins", sans-serif;
 }
 
 .fuel-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 8px 16px;                 /* slimmer */
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Left side */
+.fuel-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
 }
 
 .fuel-title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  font-weight: 900;
+  font-size: 13px;
+  font-weight: 700;                  /* not super bold */
   color: #165FAE;
   white-space: nowrap;
 }
 
-.fuel-icon {
-  width: 18px;
-  height: 18px;
-  color: #165FAE;
+/* Chips */
+.fuel-chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .fuel-chip {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 10px;
+  padding: 6px 10px;                 /* slimmer chip */
   border-radius: 999px;
-  background: #ffffff;
-  border: 1px solid rgba(22, 95, 174, 0.15);
-  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(22, 95, 174, 0.12);
 }
 
 .fuel-label {
-  font-size: 13px;
-  font-weight: 800;
-  color: #165FAE;
+  font-size: 12px;
+  font-weight: 600;                  /* normal */
+  color: rgba(22, 95, 174, 0.85);
 }
 
 .fuel-price {
-  font-size: 13px;
-  font-weight: 900;
+  font-size: 12px;
+  font-weight: 700;                  /* only price slightly bold */
   color: #ffffff;
-  background: #165FAE;
-  padding: 3px 9px;
+  padding: 4px 9px;
   border-radius: 999px;
+  background: #165FAE;
 }
 
 .fuel-chip.diesel .fuel-price {
   background: #7CC000;
+  color: #0b2a15;
+}
+
+/* Right side */
+.fuel-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .fuel-updated {
-  margin-left: auto;
   font-size: 12px;
-  font-weight: 700;
-  color: rgba(22, 95, 174, 0.75);
+  font-weight: 600;                  /* normal */
+  color: rgba(22, 95, 174, 0.70);
   white-space: nowrap;
 }
 
-@media (max-width: 600px) {
+/* Rewards button (slim) */
+.fuel-rewards-btn {
+  text-decoration: none;
+  background: rgba(22, 95, 174, 0.10);
+  border: 1px solid rgba(22, 95, 174, 0.18);
+  color: #165FAE;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 12px;                 /* slimmer */
+  border-radius: 999px;
+  transition: transform 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.fuel-rewards-btn:hover {
+  background: rgba(22, 95, 174, 0.14);
+  transform: translateY(-1px);
+}
+
+/* Mobile: keep it compact, stack cleanly */
+@media (max-width: 700px) {
   .fuel-inner {
-    flex-wrap: wrap;
-    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 
-  .fuel-updated {
-    margin-left: 0;
+  .fuel-right {
     width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 420px) {
+  .fuel-chips {
+    width: 100%;
+  }
+
+  .fuel-right {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .fuel-rewards-btn {
+    width: 100%;
+    text-align: center;
   }
 }
