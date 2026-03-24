@@ -34,7 +34,7 @@ export default function Navbar() {
           </NavLink>
 
           <NavLink className="link" to="/whatweoffer">
-            What We Offer
+            What We Have
           </NavLink>
 
           <NavLink className="link" to="/faqs">
