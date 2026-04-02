@@ -22,7 +22,7 @@ export default function Contact() {
             <span>Contact Us</span>
           </div>
 
-          <h2>Visit or Message Buddy’s</h2>
+          <h2>Reach Out for any Questions</h2>
           <p>
             Call us directly or send a message. We’re always friendly and ready to help.
           </p>
